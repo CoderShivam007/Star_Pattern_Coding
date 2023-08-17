@@ -1,0 +1,73 @@
+#include<stdio.h>
+#include<conio.h>
+
+/*
+
+    *
+   * *
+  *   *
+ *     *
+*       *
+ *     *
+  *   *
+   * *
+    *
+
+
+*/
+
+
+
+
+int main()
+{
+    int n,i,j,a,b,c,d;
+
+    printf("Enter row-size: ");
+    scanf("%d",&n);
+
+    a=b=n;
+    c=1;
+    d= n*2-1;
+
+    for(i=1;i<n*2;i++)
+    {
+        if(i<n)
+        {
+            for(j=1;j<n*2;j++)
+            {
+                if(j==a || j==b)
+                {
+                    printf("*");
+                }
+                else
+                {
+                    printf(" ");
+                }
+            }
+            a--;
+            b++;
+        }
+
+        else
+        {
+
+            for(j=1;j<=n*2;j++)
+            {
+                if(j==c || j==d)
+                {
+                    printf("*");
+                }
+
+                else
+                {
+                    printf(" ");
+                }
+            }
+            c++;
+            d--;
+        }
+        printf("\n");
+    }
+
+}
